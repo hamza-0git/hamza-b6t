@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    let currentLang = localStorage.getItem('lang') || 'ar';
+    let currentLang = localStorage.getItem('lang') || 'en';
 
     // ===== Elements =====
     const navbar = document.querySelector('.navbar');
