@@ -6,24 +6,30 @@
     <meta name="description" content="حمزة - مبرمج أنظمة مبتدئ من المغرب | Rust, C, C++, Assembly">
     <title>حمزة | مبرمج أنظمة</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="#home" class="logo">حمزة<span class="logo-dot">.</span></a>
-            <button class="menu-toggle" aria-label="القائمة">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-links">
-                <li><a href="#home" class="active">الرئيسية</a></li>
-                <li><a href="#about">عنّي</a></li>
-                <li><a href="#skills">المهارات</a></li>
-                <li><a href="#contact">تواصل</a></li>
-            </ul>
+            <a href="#home" class="logo" data-i18n="logo">حمزة<span class="logo-dot">.</span></a>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#home" class="active" data-i18n="nav_home">الرئيسية</a></li>
+                    <li><a href="#about" data-i18n="nav_about">عنّي</a></li>
+                    <li><a href="#skills" data-i18n="nav_skills">المهارات</a></li>
+                    <li><a href="#contact" data-i18n="nav_contact">تواصل</a></li>
+                </ul>
+                <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+                    <span class="lang-label active" data-lang="ar">ع</span>
+                    <span class="lang-label" data-lang="en">EN</span>
+                </button>
+                <button class="menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -36,18 +42,19 @@
             <div class="particle" data-speed="0.025"></div>
         </div>
         <div class="container hero-content">
-            <p class="hero-greeting animate-item">مرحباً، أنا</p>
-            <h1 class="hero-title animate-item">حمزة</h1>
+            <p class="hero-greeting animate-item" data-i18n="hero_greeting">مرحباً، أنا</p>
+            <h1 class="hero-title animate-item" data-i18n="hero_name">حمزة</h1>
             <h2 class="hero-subtitle animate-item">
-                مبرمج أنظمة <span class="typed-text"></span><span class="cursor">|</span>
+                <span data-i18n="hero_role">مبرمج أنظمة</span>
+                <span class="typed-text"></span><span class="cursor">|</span>
             </h2>
-            <p class="hero-description animate-item">
+            <p class="hero-description animate-item" data-i18n="hero_desc">
                 مطور نظم مبتدئ من المغرب، شغوف ببرمجة الأنظمة المنخفضة المستوى
                 واستكشاف عالم لغات البرمجة القوية.
             </p>
             <div class="hero-buttons animate-item">
-                <a href="#skills" class="btn btn-primary">استكشف مهاراتي</a>
-                <a href="#contact" class="btn btn-outline">تواصل معي</a>
+                <a href="#skills" class="btn btn-primary" data-i18n="hero_btn1">استكشف مهاراتي</a>
+                <a href="#contact" class="btn btn-outline" data-i18n="hero_btn2">تواصل معي</a>
             </div>
             <div class="hero-social animate-item">
                 <a href="https://github.com/hamza-0git" target="_blank" rel="noopener" aria-label="GitHub" class="social-link">
@@ -70,30 +77,30 @@
 
     <section id="about" class="section about">
         <div class="container">
-            <h2 class="section-title">عنّي</h2>
+            <h2 class="section-title" data-i18n="about_title">عنّي</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>حمزة — مبرمج أنظمة من المغرب</h3>
-                    <p>
+                    <h3 data-i18n="about_heading">حمزة — مبرمج أنظمة من المغرب</h3>
+                    <p data-i18n="about_p1">
                         أنا حمزة، مبرمج أنظمة مبتدئ من المغرب. شغوف بعالم البرمجة
                         المنخفضة المستوى، أتعلّم وأتطور باستمرار في لغات القوة والأداء العالي.
                     </p>
-                    <p>
+                    <p data-i18n="about_p2">
                         أؤمن بأن فهم الآلة من الصفر يصنع مبرمجين أفضل، لذلك أركز على
                         لغات مثل Rust و C و C++ و Assembly لبناء أساس قوي في هندسة البرمجيات.
                     </p>
                     <div class="about-stats">
                         <div class="stat">
                             <span class="stat-number" data-target="5">0</span>
-                            <span class="stat-label">لغة برمجة</span>
+                            <span class="stat-label" data-i18n="stat1">لغة برمجة</span>
                         </div>
                         <div class="stat">
                             <span class="stat-number" data-target="3">0</span>
-                            <span class="stat-label">حسابات تواصل</span>
+                            <span class="stat-label" data-i18n="stat2">حسابات تواصل</span>
                         </div>
                         <div class="stat">
                             <span class="stat-number" data-target="1">0</span>
-                            <span class="stat-label">بلد — المغرب</span>
+                            <span class="stat-label" data-i18n="stat3">بلد — المغرب</span>
                         </div>
                     </div>
                 </div>
@@ -113,7 +120,7 @@
                             <p><span class="prompt">$</span> ls languages/</p>
                             <p class="output">rust  c  c++  assembly  bash</p>
                             <p><span class="prompt">$</span> status</p>
-                            <p class="output blink-line">learning & building<span class="blink">_</span></p>
+                            <p class="output blink-line">learning &amp; building<span class="blink">_</span></p>
                         </div>
                     </div>
                 </div>
@@ -123,8 +130,8 @@
 
     <section id="skills" class="section skills">
         <div class="container">
-            <h2 class="section-title">لغات البرمجة</h2>
-            <p class="section-subtitle">اللغات التي أعمل بها وأتعلّمها</p>
+            <h2 class="section-title" data-i18n="skills_title">لغات البرمجة</h2>
+            <p class="section-subtitle" data-i18n="skills_subtitle">اللغات التي أعمل بها وأتعلّمها</p>
             <div class="skills-grid">
                 <div class="skill-card" data-lang="rust">
                     <div class="skill-icon">
@@ -134,7 +141,7 @@
                         </svg>
                     </div>
                     <h3>Rust</h3>
-                    <p>لغة أنظمة حديثة تجمع بين الأداء العالي والأمان الذاهبي بدون جامٍ غارب</p>
+                    <p data-i18n="skill_rust">لغة أنظمة حديثة تجمع بين الأداء العالي والأمان الذاهبي بدون جامٍ غارب</p>
                     <div class="skill-bar"><div class="skill-progress" data-level="70"></div></div>
                 </div>
                 <div class="skill-card" data-lang="c">
@@ -146,7 +153,7 @@
                         </svg>
                     </div>
                     <h3>C</h3>
-                    <p>لغة الأساس في برمجة الأنظمة والتطبيقات عالية الأداء</p>
+                    <p data-i18n="skill_c">لغة الأساس في برمجة الأنظمة والتطبيقات عالية الأداء</p>
                     <div class="skill-bar"><div class="skill-progress" data-level="65"></div></div>
                 </div>
                 <div class="skill-card" data-lang="cpp">
@@ -158,7 +165,7 @@
                         </svg>
                     </div>
                     <h3>C++</h3>
-                    <p>امتداد قوي لغة C مع دعم البرمجة كائنية التوجّه والقوالب</p>
+                    <p data-i18n="skill_cpp">امتداد قوي لغة C مع دعم البرمجة كائنية التوجّه والقوالب</p>
                     <div class="skill-bar"><div class="skill-progress" data-level="60"></div></div>
                 </div>
                 <div class="skill-card" data-lang="asm">
@@ -170,7 +177,7 @@
                         </svg>
                     </div>
                     <h3>Assembly</h3>
-                    <p>لغة المستوى المنخفض للتعامل المباشر مع المعالج والذاكرة</p>
+                    <p data-i18n="skill_asm">لغة المستوى المنخفض للتعامل المباشر مع المعالج والذاكرة</p>
                     <div class="skill-bar"><div class="skill-progress" data-level="50"></div></div>
                 </div>
                 <div class="skill-card" data-lang="bash">
@@ -181,7 +188,7 @@
                         </svg>
                     </div>
                     <h3>Bash Script</h3>
-                    <p>أتمتة المهام وبرمجة سطر الأوامر في أنظمة لينكس</p>
+                    <p data-i18n="skill_bash">أتمتة المهام وبرمجة سطر الأوامر في أنظمة لينكس</p>
                     <div class="skill-bar"><div class="skill-progress" data-level="75"></div></div>
                 </div>
             </div>
@@ -190,8 +197,8 @@
 
     <section id="contact" class="section contact">
         <div class="container">
-            <h2 class="section-title">تواصل معي</h2>
-            <p class="section-subtitle">يمكنك الوصول إليّ عبر هذه المنصات</p>
+            <h2 class="section-title" data-i18n="contact_title">تواصل معي</h2>
+            <p class="section-subtitle" data-i18n="contact_subtitle">يمكنك الوصول إليّ عبر هذه المنصات</p>
             <div class="contact-grid">
                 <a href="https://github.com/hamza-0git" target="_blank" rel="noopener" class="contact-card">
                     <div class="contact-icon">
@@ -214,7 +221,7 @@
                         <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"/></svg>
                     </div>
                     <h3>Discord</h3>
-                    <p>انضم إلى الخادم</p>
+                    <p data-i18n="discord_text">انضم إلى الخادم</p>
                     <span class="contact-arrow">↗</span>
                 </a>
             </div>
@@ -223,11 +230,11 @@
 
     <footer class="footer">
         <div class="container footer-content">
-            <p>© <span id="year"></span> حمزة — مبرمج أنظمة. جميع الحقوق محفوظة.</p>
+            <p>© <span id="year"></span> <span data-i18n="footer">حمزة — مبرمج أنظمة. جميع الحقوق محفوظة.</span></p>
         </div>
     </footer>
 
-    <button class="back-to-top" aria-label="العودة للأعلى">↑</button>
+    <button class="back-to-top" aria-label="Back to top">↑</button>
 
     <script src="script.js"></script>
 </body>
